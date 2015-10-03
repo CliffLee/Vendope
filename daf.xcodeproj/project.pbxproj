@@ -15,6 +15,10 @@
 		A6FA75071BC059E1009DE867 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6FA75051BC059E1009DE867 /* LaunchScreen.storyboard */; };
 		A6FA75121BC059E5009DE867 /* dafTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FA75111BC059E5009DE867 /* dafTests.swift */; };
 		A6FA751D1BC059F0009DE867 /* dafUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FA751C1BC059F0009DE867 /* dafUITests.swift */; };
+		C30D717A1BC05E2400BDBD5F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30D71791BC05E2400BDBD5F /* LoginViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		C3E34C8B1BC0763200C02929 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E34C8A1BC0763200C02929 /* StartViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		C3E34C8D1BC0796300C02929 /* NavigationControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E34C8C1BC0796300C02929 /* NavigationControllerDelegate.swift */; settings = {ASSET_TAGS = (); }; };
+		C3E34C8F1BC07AC900C02929 /* CircleTransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E34C8E1BC07AC900C02929 /* CircleTransitionAnimator.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,10 @@
 		A6FA75181BC059F0009DE867 /* dafUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = dafUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6FA751C1BC059F0009DE867 /* dafUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dafUITests.swift; sourceTree = "<group>"; };
 		A6FA751E1BC059F7009DE867 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C30D71791BC05E2400BDBD5F /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		C3E34C8A1BC0763200C02929 /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		C3E34C8C1BC0796300C02929 /* NavigationControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationControllerDelegate.swift; sourceTree = "<group>"; };
+		C3E34C8E1BC07AC900C02929 /* CircleTransitionAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleTransitionAnimator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +108,10 @@
 			isa = PBXGroup;
 			children = (
 				A6FA74FA1BC059DA009DE867 /* AppDelegate.swift */,
+				C3E34C8C1BC0796300C02929 /* NavigationControllerDelegate.swift */,
+				C3E34C8E1BC07AC900C02929 /* CircleTransitionAnimator.swift */,
+				C3E34C8A1BC0763200C02929 /* StartViewController.swift */,
+				C30D71791BC05E2400BDBD5F /* LoginViewController.swift */,
 				A6FA74FC1BC059DA009DE867 /* FirstViewController.swift */,
 				A6FA74FE1BC059DA009DE867 /* SecondViewController.swift */,
 				A6FA75001BC059E1009DE867 /* Main.storyboard */,
@@ -258,8 +270,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3E34C8B1BC0763200C02929 /* StartViewController.swift in Sources */,
+				C30D717A1BC05E2400BDBD5F /* LoginViewController.swift in Sources */,
 				A6FA74FF1BC059DA009DE867 /* SecondViewController.swift in Sources */,
 				A6FA74FB1BC059DA009DE867 /* AppDelegate.swift in Sources */,
+				C3E34C8F1BC07AC900C02929 /* CircleTransitionAnimator.swift in Sources */,
+				C3E34C8D1BC0796300C02929 /* NavigationControllerDelegate.swift in Sources */,
 				A6FA74FD1BC059DA009DE867 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -487,6 +503,7 @@
 				A6FA75231BC059F7009DE867 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A6FA75241BC059F7009DE867 /* Build configuration list for PBXNativeTarget "dafTests" */ = {
 			isa = XCConfigurationList;
@@ -495,6 +512,7 @@
 				A6FA75261BC059F7009DE867 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A6FA75271BC059F7009DE867 /* Build configuration list for PBXNativeTarget "dafUITests" */ = {
 			isa = XCConfigurationList;
@@ -503,6 +521,7 @@
 				A6FA75291BC059F7009DE867 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
