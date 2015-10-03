@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A61584DE1BC0A0D700054E51 /* LeftSideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61584DD1BC0A0D700054E51 /* LeftSideViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		A61584EA1BC0A11F00054E51 /* MMDrawerBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A61584E21BC0A11F00054E51 /* MMDrawerBarButtonItem.m */; settings = {ASSET_TAGS = (); }; };
+		A61584EB1BC0A11F00054E51 /* MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = A61584E41BC0A11F00054E51 /* MMDrawerController.m */; settings = {ASSET_TAGS = (); }; };
+		A61584EC1BC0A11F00054E51 /* MMDrawerVisualState.m in Sources */ = {isa = PBXBuildFile; fileRef = A61584E71BC0A11F00054E51 /* MMDrawerVisualState.m */; settings = {ASSET_TAGS = (); }; };
+		A61584ED1BC0A11F00054E51 /* UIViewController+MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = A61584E91BC0A11F00054E51 /* UIViewController+MMDrawerController.m */; settings = {ASSET_TAGS = (); }; };
 		A6FA74FB1BC059DA009DE867 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FA74FA1BC059DA009DE867 /* AppDelegate.swift */; };
 		A6FA74FD1BC059DA009DE867 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FA74FC1BC059DA009DE867 /* FirstViewController.swift */; };
 		A6FA74FF1BC059DA009DE867 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FA74FE1BC059DA009DE867 /* SecondViewController.swift */; };
@@ -39,6 +44,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A61584DD1BC0A0D700054E51 /* LeftSideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftSideViewController.swift; sourceTree = "<group>"; };
+		A61584E01BC0A11E00054E51 /* daf-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "daf-Bridging-Header.h"; sourceTree = "<group>"; };
+		A61584E11BC0A11F00054E51 /* MMDrawerBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDrawerBarButtonItem.h; sourceTree = "<group>"; };
+		A61584E21BC0A11F00054E51 /* MMDrawerBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMDrawerBarButtonItem.m; sourceTree = "<group>"; };
+		A61584E31BC0A11F00054E51 /* MMDrawerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDrawerController.h; sourceTree = "<group>"; };
+		A61584E41BC0A11F00054E51 /* MMDrawerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMDrawerController.m; sourceTree = "<group>"; };
+		A61584E51BC0A11F00054E51 /* MMDrawerController+Subclass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MMDrawerController+Subclass.h"; sourceTree = "<group>"; };
+		A61584E61BC0A11F00054E51 /* MMDrawerVisualState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDrawerVisualState.h; sourceTree = "<group>"; };
+		A61584E71BC0A11F00054E51 /* MMDrawerVisualState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMDrawerVisualState.m; sourceTree = "<group>"; };
+		A61584E81BC0A11F00054E51 /* UIViewController+MMDrawerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+MMDrawerController.h"; sourceTree = "<group>"; };
+		A61584E91BC0A11F00054E51 /* UIViewController+MMDrawerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+MMDrawerController.m"; sourceTree = "<group>"; };
 		A6FA74F71BC059DA009DE867 /* daf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = daf.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6FA74FA1BC059DA009DE867 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A6FA74FC1BC059DA009DE867 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -84,6 +100,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A61584DF1BC0A11000054E51 /* DrawerFiles */ = {
+			isa = PBXGroup;
+			children = (
+				A61584E11BC0A11F00054E51 /* MMDrawerBarButtonItem.h */,
+				A61584E21BC0A11F00054E51 /* MMDrawerBarButtonItem.m */,
+				A61584E31BC0A11F00054E51 /* MMDrawerController.h */,
+				A61584E41BC0A11F00054E51 /* MMDrawerController.m */,
+				A61584E51BC0A11F00054E51 /* MMDrawerController+Subclass.h */,
+				A61584E61BC0A11F00054E51 /* MMDrawerVisualState.h */,
+				A61584E71BC0A11F00054E51 /* MMDrawerVisualState.m */,
+				A61584E81BC0A11F00054E51 /* UIViewController+MMDrawerController.h */,
+				A61584E91BC0A11F00054E51 /* UIViewController+MMDrawerController.m */,
+				A61584E01BC0A11E00054E51 /* daf-Bridging-Header.h */,
+			);
+			name = DrawerFiles;
+			sourceTree = "<group>";
+		};
 		A6FA74EE1BC059DA009DE867 = {
 			isa = PBXGroup;
 			children = (
@@ -107,11 +140,13 @@
 		A6FA74F91BC059DA009DE867 /* daf */ = {
 			isa = PBXGroup;
 			children = (
+				A61584DF1BC0A11000054E51 /* DrawerFiles */,
 				C304A4901BC09A180000DB4E /* Frameworks */,
 				A6FA74FA1BC059DA009DE867 /* AppDelegate.swift */,
 				C3E34C8C1BC0796300C02929 /* NavigationControllerDelegate.swift */,
 				C3E34C8E1BC07AC900C02929 /* CircleTransitionAnimator.swift */,
 				C3E34C8A1BC0763200C02929 /* StartViewController.swift */,
+				A61584DD1BC0A0D700054E51 /* LeftSideViewController.swift */,
 				C30D71791BC05E2400BDBD5F /* LoginViewController.swift */,
 				A6FA74FC1BC059DA009DE867 /* FirstViewController.swift */,
 				A6FA74FE1BC059DA009DE867 /* SecondViewController.swift */,
@@ -210,6 +245,7 @@
 		A6FA74EF1BC059DA009DE867 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Clifford Lee";
 				TargetAttributes = {
@@ -280,10 +316,15 @@
 			files = (
 				C3E34C8B1BC0763200C02929 /* StartViewController.swift in Sources */,
 				C30D717A1BC05E2400BDBD5F /* LoginViewController.swift in Sources */,
+				A61584EC1BC0A11F00054E51 /* MMDrawerVisualState.m in Sources */,
+				A61584ED1BC0A11F00054E51 /* UIViewController+MMDrawerController.m in Sources */,
 				A6FA74FF1BC059DA009DE867 /* SecondViewController.swift in Sources */,
 				A6FA74FB1BC059DA009DE867 /* AppDelegate.swift in Sources */,
+				A61584EA1BC0A11F00054E51 /* MMDrawerBarButtonItem.m in Sources */,
 				C3E34C8F1BC07AC900C02929 /* CircleTransitionAnimator.swift in Sources */,
+				A61584EB1BC0A11F00054E51 /* MMDrawerController.m in Sources */,
 				C3E34C8D1BC0796300C02929 /* NavigationControllerDelegate.swift in Sources */,
+				A61584DE1BC0A0D700054E51 /* LeftSideViewController.swift in Sources */,
 				A6FA74FD1BC059DA009DE867 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -426,11 +467,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = daf/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = leecliff.daf;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "daf/daf-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -440,11 +483,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = daf/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = leecliff.daf;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "daf/daf-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
