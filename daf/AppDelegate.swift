@@ -15,6 +15,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//        let startVC = storyboard.instantiateViewControllerWithIdentifier("StartVC") as! StartViewController
+//        self.window?.rootViewController = startVC
         // Override point for customization after application launch.
         return true
     }
