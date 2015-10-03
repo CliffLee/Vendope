@@ -43,10 +43,11 @@ class CircleTransitionAnimator: NSObject, UIViewControllerAnimatedTransitioning 
         
         //6
         var maskLayerAnimation = CABasicAnimation(keyPath: "path")
-        maskLayerAnimation.fromValue = circleMaskPathInitial.CGPath
+                maskLayerAnimation.fromValue = circleMaskPathInitial.CGPath
         maskLayerAnimation.toValue = circleMaskPathFinal.CGPath
         maskLayerAnimation.duration = self.transitionDuration(transitionContext)
         maskLayerAnimation.delegate = self
+//        maskLayerAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut];
         maskLayer.addAnimation(maskLayerAnimation, forKey: "path")
     }
     

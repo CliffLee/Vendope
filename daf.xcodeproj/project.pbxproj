@@ -107,6 +107,7 @@
 		A6FA74F91BC059DA009DE867 /* daf */ = {
 			isa = PBXGroup;
 			children = (
+				C304A4901BC09A180000DB4E /* Frameworks */,
 				A6FA74FA1BC059DA009DE867 /* AppDelegate.swift */,
 				C3E34C8C1BC0796300C02929 /* NavigationControllerDelegate.swift */,
 				C3E34C8E1BC07AC900C02929 /* CircleTransitionAnimator.swift */,
@@ -138,6 +139,13 @@
 				A6FA751E1BC059F7009DE867 /* Info.plist */,
 			);
 			path = dafUITests;
+			sourceTree = "<group>";
+		};
+		C304A4901BC09A180000DB4E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
