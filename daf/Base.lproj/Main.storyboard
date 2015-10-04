@@ -18,11 +18,11 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="1Wj-AZ-sMB">
-                                <rect key="frame" x="0.0" y="188" width="320" height="316"/>
+                                <rect key="frame" x="0.0" y="312" width="320" height="192"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="316" id="0ga-N6-j0z"/>
+                                    <constraint firstAttribute="height" constant="192" id="32r-t8-jfN"/>
                                 </constraints>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="idCell" textLabel="9jN-hW-bVZ" rowHeight="60" style="IBUITableViewCellStyleDefault" id="deH-ml-EEq">
@@ -48,17 +48,16 @@
                                 </prototypes>
                             </tableView>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="B6Z-mb-3tQ">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="188"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="312"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.41960784309999999" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bce-gM-uFY">
-                                <rect key="frame" x="262" y="142" width="38" height="38"/>
+                                <rect key="frame" x="262" y="266" width="38" height="38"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.41960784309999999" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="38" id="2xs-Vg-IaY"/>
-                                    <constraint firstAttribute="height" constant="38" id="bx7-JM-wLb"/>
+                                    <constraint firstAttribute="width" constant="38" id="QJz-FX-J5F"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title=" ➤">
@@ -77,18 +76,16 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="1Wj-AZ-sMB" firstAttribute="top" secondItem="Bce-gM-uFY" secondAttribute="bottom" constant="8" symbolic="YES" id="Axl-UX-6f5"/>
-                            <constraint firstItem="1Wj-AZ-sMB" firstAttribute="trailing" secondItem="B6Z-mb-3tQ" secondAttribute="trailing" id="BMi-H6-WY2"/>
-                            <constraint firstItem="1Wj-AZ-sMB" firstAttribute="top" secondItem="B6Z-mb-3tQ" secondAttribute="bottom" id="Stx-TF-pWf"/>
-                            <constraint firstItem="1Wj-AZ-sMB" firstAttribute="leading" secondItem="o4Y-xB-kg6" secondAttribute="leading" id="Tld-vP-KFQ"/>
-                            <constraint firstItem="Bce-gM-uFY" firstAttribute="top" secondItem="SB7-j0-uGD" secondAttribute="bottom" constant="142" id="Vjo-FU-R1E"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Bce-gM-uFY" secondAttribute="trailing" constant="4" id="XnG-3T-WPn"/>
-                            <constraint firstItem="B6Z-mb-3tQ" firstAttribute="top" secondItem="SB7-j0-uGD" secondAttribute="bottom" id="bO1-sd-LUh"/>
-                            <constraint firstItem="1Wj-AZ-sMB" firstAttribute="top" secondItem="B6Z-mb-3tQ" secondAttribute="bottom" id="cDY-9F-Aig"/>
-                            <constraint firstItem="1Wj-AZ-sMB" firstAttribute="leading" secondItem="B6Z-mb-3tQ" secondAttribute="leading" id="dAI-R2-kfk"/>
-                            <constraint firstAttribute="trailing" secondItem="1Wj-AZ-sMB" secondAttribute="trailing" id="dRE-mH-Ykh"/>
-                            <constraint firstItem="1Wj-AZ-sMB" firstAttribute="top" secondItem="B6Z-mb-3tQ" secondAttribute="bottom" id="qfN-h7-8Sv"/>
-                            <constraint firstItem="1Wj-AZ-sMB" firstAttribute="bottom" secondItem="32o-RQ-1NT" secondAttribute="top" id="rZP-Rb-aQo"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Bce-gM-uFY" secondAttribute="trailing" constant="4" id="5Ca-a7-jP4"/>
+                            <constraint firstItem="1Wj-AZ-sMB" firstAttribute="top" secondItem="B6Z-mb-3tQ" secondAttribute="bottom" id="FbO-h0-cJh"/>
+                            <constraint firstItem="B6Z-mb-3tQ" firstAttribute="trailing" secondItem="1Wj-AZ-sMB" secondAttribute="trailing" id="Fgg-q1-SIQ"/>
+                            <constraint firstAttribute="trailing" secondItem="1Wj-AZ-sMB" secondAttribute="trailing" id="YkP-rX-4z2"/>
+                            <constraint firstItem="B6Z-mb-3tQ" firstAttribute="leading" secondItem="1Wj-AZ-sMB" secondAttribute="leading" id="bdP-gA-gdT"/>
+                            <constraint firstItem="Bce-gM-uFY" firstAttribute="top" secondItem="B6Z-mb-3tQ" secondAttribute="bottom" constant="-46" id="gZc-Gu-gDn"/>
+                            <constraint firstItem="1Wj-AZ-sMB" firstAttribute="bottom" secondItem="32o-RQ-1NT" secondAttribute="top" id="qai-vG-IOX"/>
+                            <constraint firstItem="1Wj-AZ-sMB" firstAttribute="top" secondItem="Bce-gM-uFY" secondAttribute="bottom" constant="8" symbolic="YES" id="sog-Il-0FA"/>
+                            <constraint firstItem="B6Z-mb-3tQ" firstAttribute="top" secondItem="SB7-j0-uGD" secondAttribute="bottom" id="udS-hR-bDW"/>
+                            <constraint firstItem="1Wj-AZ-sMB" firstAttribute="leading" secondItem="o4Y-xB-kg6" secondAttribute="leading" id="yex-Ik-xb7"/>
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
