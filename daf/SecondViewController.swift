@@ -18,7 +18,27 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var tblSearchResults: UITableView!
     
+    
+    
+    
+    
     let locationManager = CLLocationManager()
+   
+    @IBAction func locateUser(sender: AnyObject) {
+        self.locationManager.delegate = self
+        self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        self.locationManager.requestWhenInUseAuthorization()
+        self.locationManager.startUpdatingLocation()
+        self.mapView.showsUserLocation = true
+        func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+            let location = locations.last
+            let center = CLLocationCoordinate2D(latitude: location!.coordinate.latitude, longitude: location!.coordinate.longitude)
+            let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.07, longitudeDelta: 0.07))
+            self.mapView.setRegion(region, animated: true)
+            self.locationManager.stopUpdatingLocation()
+            
+        }
+    }
     
     var services:[PFObject] = []
     var filteredArray: [PFObject] = []

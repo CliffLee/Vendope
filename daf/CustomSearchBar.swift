@@ -39,12 +39,25 @@ class CustomSearchBar: UISearchBar {
         path.moveToPoint(startPoint)
         path.addLineToPoint(endPoint)
         
+        let startPoint2 = CGPointMake(0.0, 0.0)
+        let endPoint2 = CGPointMake (frame.size.width, 0.0)
+        let path2 = UIBezierPath()
+        path2.moveToPoint(startPoint2)
+        path2.addLineToPoint(endPoint2)
+        
+        let shapeLayer2 = CAShapeLayer()
+        shapeLayer2.path = path2.CGPath
+        shapeLayer2.strokeColor = preferredTextColor.CGColor
+        shapeLayer2.lineWidth = 0.0
+        
+        
         let shapeLayer = CAShapeLayer()
         shapeLayer.path = path.CGPath
         shapeLayer.strokeColor = preferredTextColor.CGColor
         shapeLayer.lineWidth = 5.0
         
         layer.addSublayer(shapeLayer)
+        layer.addSublayer(shapeLayer2)
         
         super.drawRect(rect)
     }
