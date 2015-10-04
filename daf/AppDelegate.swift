@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Parse
+import Bolts
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,8 +18,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        Parse.enableLocalDatastore()
         
-        
+        // Initialize Parse.
+        Parse.setApplicationId("tLbiqADD10mxnXGkav2u6gwCUXM5BMKbaH2rNB3z",
+            clientKey: "TIIxiR1Un8N0HYbNov0EQmrUPcsoigkuF9CzazmT")
         
         //var rootViewController = self.window!.rootViewController
         
@@ -26,8 +31,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         var centerViewController = mainStoryBoard.instantiateViewControllerWithIdentifier("SecondViewController") as! SecondViewController
         
         var leftViewController = mainStoryBoard.instantiateViewControllerWithIdentifier("LeftSideViewController") as! LeftSideViewController
-        
-        
         
         var leftNav = UINavigationController(rootViewController: leftViewController)
         var centerNav = UINavigationController(rootViewController: centerViewController)
