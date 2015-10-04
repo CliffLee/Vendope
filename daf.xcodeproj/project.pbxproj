@@ -38,6 +38,7 @@
 		B8B78C091BC0C00F005C25E2 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8B78BFF1BC0C00F005C25E2 /* SystemConfiguration.framework */; };
 		B8B78C0C1BC0C2DA005C25E2 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8B78C0A1BC0C2DA005C25E2 /* Bolts.framework */; settings = {ASSET_TAGS = (); }; };
 		B8B78C0D1BC0C2DA005C25E2 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8B78C0B1BC0C2DA005C25E2 /* Parse.framework */; settings = {ASSET_TAGS = (); }; };
+		B8B78C201BC128DF005C25E2 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8B78C1F1BC128DF005C25E2 /* MapKit.framework */; };
 		C30D717A1BC05E2400BDBD5F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30D71791BC05E2400BDBD5F /* LoginViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		C3E34C8B1BC0763200C02929 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E34C8A1BC0763200C02929 /* StartViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		C3E34C8D1BC0796300C02929 /* NavigationControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E34C8C1BC0796300C02929 /* NavigationControllerDelegate.swift */; settings = {ASSET_TAGS = (); }; };
@@ -140,6 +141,7 @@
 		B8B78BFF1BC0C00F005C25E2 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		B8B78C0A1BC0C2DA005C25E2 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		B8B78C0B1BC0C2DA005C25E2 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		B8B78C1F1BC128DF005C25E2 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		C30D71791BC05E2400BDBD5F /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		C3E34C8A1BC0763200C02929 /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		C3E34C8C1BC0796300C02929 /* NavigationControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationControllerDelegate.swift; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 				B8B78C011BC0C00F005C25E2 /* CFNetwork.framework in Frameworks */,
 				B8B78C021BC0C00F005C25E2 /* CoreGraphics.framework in Frameworks */,
 				B8B78C031BC0C00F005C25E2 /* CoreLocation.framework in Frameworks */,
+				B8B78C201BC128DF005C25E2 /* MapKit.framework in Frameworks */,
 				B8B78C041BC0C00F005C25E2 /* libsqlite3.tbd in Frameworks */,
 				B8B78C051BC0C00F005C25E2 /* libz.tbd in Frameworks */,
 				B8B78C061BC0C00F005C25E2 /* QuartzCore.framework in Frameworks */,
@@ -213,6 +216,7 @@
 		A6FA74EE1BC059DA009DE867 = {
 			isa = PBXGroup;
 			children = (
+				B8B78C1F1BC128DF005C25E2 /* MapKit.framework */,
 				A6CBCC311BC0C9E30062AB21 /* Eureka.xcodeproj */,
 				B8B78BF61BC0C00F005C25E2 /* AudioToolbox.framework */,
 				B8B78BF71BC0C00F005C25E2 /* CFNetwork.framework */,
@@ -364,6 +368,11 @@
 				TargetAttributes = {
 					A6FA74F61BC059DA009DE867 = {
 						CreatedOnToolsVersion = 7.0.1;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					A6FA750C1BC059E1009DE867 = {
 						CreatedOnToolsVersion = 7.0.1;
