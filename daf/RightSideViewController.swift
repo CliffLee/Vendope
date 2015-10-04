@@ -69,6 +69,9 @@ class RightSideViewController: FormViewController {
                 }
             }
         }
+        
+        let annotationsToRemove = singleton.mapView?.annotations
+        singleton.mapView?.removeAnnotations(annotationsToRemove!)
         singleton.tblSearchResults?.reloadData()
     }
     
