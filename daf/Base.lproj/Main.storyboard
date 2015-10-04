@@ -14,16 +14,16 @@
                         <viewControllerLayoutGuide type="bottom" id="32o-RQ-1NT"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="o4Y-xB-kg6">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="1Wj-AZ-sMB">
-                                <rect key="frame" x="0.0" y="-80" width="320" height="648"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="idCell" textLabel="9jN-hW-bVZ" rowHeight="60" style="IBUITableViewCellStyleDefault" id="deH-ml-EEq">
-                                        <rect key="frame" x="0.0" y="86" width="320" height="60"/>
+                                        <rect key="frame" x="0.0" y="22" width="320" height="60"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="deH-ml-EEq" id="gQy-xT-YDy">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="59"/>
@@ -48,12 +48,13 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="1Wj-AZ-sMB" firstAttribute="top" secondItem="o4Y-xB-kg6" secondAttribute="topMargin" constant="-80" id="4qq-P6-UcK"/>
-                            <constraint firstAttribute="bottom" secondItem="1Wj-AZ-sMB" secondAttribute="bottom" id="HFW-Rc-NBs"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="1Wj-AZ-sMB" secondAttribute="trailing" constant="-16" id="Vhx-EY-HxS"/>
-                            <constraint firstItem="1Wj-AZ-sMB" firstAttribute="leading" secondItem="o4Y-xB-kg6" secondAttribute="leadingMargin" constant="-16" id="cgA-GK-she"/>
+                            <constraint firstItem="1Wj-AZ-sMB" firstAttribute="bottom" secondItem="32o-RQ-1NT" secondAttribute="top" id="aBP-qo-eqo"/>
+                            <constraint firstAttribute="trailing" secondItem="1Wj-AZ-sMB" secondAttribute="trailing" id="hy6-th-gWm"/>
+                            <constraint firstItem="1Wj-AZ-sMB" firstAttribute="leading" secondItem="o4Y-xB-kg6" secondAttribute="leading" id="t45-M4-xh4"/>
+                            <constraint firstItem="1Wj-AZ-sMB" firstAttribute="top" secondItem="SB7-j0-uGD" secondAttribute="bottom" id="zg2-L8-JFi"/>
                         </constraints>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <navigationItem key="navigationItem" id="btO-h6-SXJ">
                         <barButtonItem key="leftBarButtonItem" title="&lt;&lt;" id="E2o-eC-Stj">
                             <connections>
