@@ -15,7 +15,7 @@ class LeftSideViewController: FormViewController {
         super.viewDidLoad()
 
         form +++ Section("") +++ Section("") +++ Section("Your Account")
-            <<< ButtonRow("history"){ $0.title = "History"}
+            <<< ButtonRow("History"){ $0.title = "History"}
             <<< ButtonRow("settings"){ $0.title = "Settings"}
             <<< ButtonRow("listings"){ $0.title = "Add a Listing..."}
         +++ Section("Explore")
