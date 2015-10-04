@@ -12,9 +12,9 @@ class LoginViewController: UIViewController {
 
     @IBAction func moveToTabController(sender: AnyObject) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let tabBarController = storyboard.instantiateViewControllerWithIdentifier("TabBarController") as! UITabBarController
+        let nController = storyboard.instantiateViewControllerWithIdentifier("NavigationController") as! UINavigationController
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        appDelegate.window?.rootViewController = tabBarController
+        appDelegate.window?.rootViewController = nController
         
     }
     

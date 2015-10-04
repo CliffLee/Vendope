@@ -9,10 +9,12 @@
 import UIKit
 
 class SecondViewController: UIViewController {
-
+    var appDelegate:AppDelegate?
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        appDelegate = UIApplication.sharedApplication().delegate as? AppDelegate
+        appDelegate?.setRootViewController()
     }
 
     override func didReceiveMemoryWarning() {

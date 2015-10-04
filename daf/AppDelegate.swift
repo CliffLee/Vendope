@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
         
-        var rootViewController = self.window!.rootViewController
+        //var rootViewController = self.window!.rootViewController
         
         let mainStoryBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         
@@ -38,13 +38,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         centerContainer!.openDrawerGestureModeMask = MMOpenDrawerGestureMode.PanningCenterView;
         centerContainer!.closeDrawerGestureModeMask = MMCloseDrawerGestureMode.PanningCenterView;
         
-        window!.rootViewController = centerContainer
         window!.makeKeyAndVisible()
         
-        
-        
-        
         return true
+    }
+    
+    func setRootViewController() {
+        window!.rootViewController = centerContainer
     }
 
     func applicationWillResignActive(application: UIApplication) {
