@@ -8,6 +8,9 @@
 
 import UIKit
 import Eureka
+import Parse
+import Bolts
+import Darwin
 
 class RightSideViewController: FormViewController {
     
@@ -26,9 +29,9 @@ class RightSideViewController: FormViewController {
             <<< SwitchRow("Shopping"){ $0.title = "Shopping"; $0.value = true}.onChange{row in self.filterResults(row.tag!)}
             <<< SwitchRow("Tutoring"){ $0.title = "Tutoring"; $0.value = true}.onChange{row in self.filterResults(row.tag!)}
         +++ Section("Distance")
-            <<< SegmentedRow<String>() { $0.options = ["1 mi.", "2 mi.", "3 mi.", "4 mi."] }
+            <<< SegmentedRow<String>("Radius") { $0.options = ["1 mi.", "2 mi.", "5 mi.", "10 mi."] }.onChange{row in self.filterResults(row.baseValue as! String)}
         +++ Section("Price")
-            <<< SegmentedRow<String>() { $0.options = ["$", "$$", "$$$", "$$$$"] }
+            <<< SegmentedRow<String>("Money") { $0.options = ["$", "$$", "$$$", "$$$$"] }.onChange{row in self.filterResults(row.baseValue as! String)}
     }
 
     func hexStringToUIColor (hex:String) -> UIColor {
@@ -58,17 +61,31 @@ class RightSideViewController: FormViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func distForm(x1: Double, x2: Double, y1: Double, y2: Double) -> Double{
+        return sqrt(pow((x1-x2),2)+pow((y1-y2),2))
+    }
+    
     func filterResults(tag:String) {
         singleton.results.removeAll()
+        var resultsCopy:[PFObject] = []
+        print(form.rowByTag("Radius")!.baseValue as! String)
         for service in singleton.services {
             for i in 0...6 {
                 if (form.rows[i].baseValue as! Bool) {
                     if (service.valueForKey("category") as? String == form.rows[i].tag && singleton.results.indexOf(service) == nil) {
                         singleton.results.append(service)
+                        resultsCopy.append(service)
                     }
                 }
             }
         }
+        
+        if (form.rowByTag("Radius") != nil) {
+            for service in resultsCopy {
+                if (distForm(service.valueForKey("x"), service.valueForKey("y"), )
+            }
+        }
+        
         singleton.tblSearchResults?.reloadData()
     }
     
