@@ -24,4 +24,5 @@ class Singleton {
     var results:[PFObject] = []
     var tblSearchResults:UITableView?
     var mapView:MKMapView?
+    var indexDetail:Int?
 }

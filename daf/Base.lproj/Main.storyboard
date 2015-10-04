@@ -114,6 +114,57 @@
             </objects>
             <point key="canvasLocation" x="1904" y="348"/>
         </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="aOS-wG-3th">
+            <objects>
+                <viewController storyboardIdentifier="DetailViewController" id="bml-af-TLV" customClass="DetailViewController" customModule="daf" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PBb-vh-Sss"/>
+                        <viewControllerLayoutGuide type="bottom" id="vVF-4Y-nIe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="P1n-2B-BIg">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ABG-MX-Qzi" customClass="CosmosView" customModule="daf" customModuleProvider="target">
+                                <rect key="frame" x="100" y="231" width="120" height="22"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.41960784309999999" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="colorFilled">
+                                        <color key="value" red="1" green="0.80000000000000004" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="starSize">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="q50-Eq-YKA">
+                                <rect key="frame" x="40" y="95" width="240" height="128"/>
+                                <animations/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Pt-zj-6e4">
+                                <rect key="frame" x="40" y="274" width="240" height="128"/>
+                                <animations/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" red="0.41960784309999999" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="q6x-9K-n0w"/>
+                    <connections>
+                        <outlet property="imageView" destination="q50-Eq-YKA" id="ONE-Lu-xeP"/>
+                        <outlet property="textViewDescription" destination="2Pt-zj-6e4" id="Ebe-WU-8vD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tCn-Tm-EGo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2437" y="991"/>
+        </scene>
         <!--Right Side View Controller-->
         <scene sceneID="Fjs-bD-Mhb">
             <objects>
@@ -131,7 +182,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HoA-2v-Zl4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2306" y="723"/>
+            <point key="canvasLocation" x="2838" y="723"/>
         </scene>
         <!--Left Side View Controller-->
         <scene sceneID="Rif-Bi-ppF">
@@ -394,6 +445,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rVb-G0-Ms7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1372" y="348"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="O6V-Rg-Iw9">
+            <objects>
+                <navigationController storyboardIdentifier="navigationDetailController" automaticallyAdjustsScrollViewInsets="NO" id="JIZ-oJ-spO" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Pg2-El-6Ip">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="bml-af-TLV" kind="relationship" relationship="rootViewController" id="jN8-IU-Inw"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DuP-Pn-1gU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1905" y="991"/>
         </scene>
     </scenes>
     <resources>

@@ -258,5 +258,11 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
         tblSearchResults.reloadData()
     }
     
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        singleton.indexDetail = indexPath.row
+        let nController = storyboard!.instantiateViewControllerWithIdentifier("DetailViewController")
+        self.navigationController?.pushViewController(nController, animated: true)
+    }
+    
 
 }
