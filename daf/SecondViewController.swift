@@ -7,13 +7,15 @@
 //
 
 import UIKit
+import Parse
+import Bolts
 
 class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchResultsUpdating, UISearchBarDelegate {
     
     @IBOutlet weak var tblSearchResults: UITableView!
     
-    var dataArray = [String] ()
-    var filteredArray = [String]()
+    var services:[PFObject] = []
+    var filteredArray: [PFObject] = []
     var shouldShowSearchResults = false
     var searchController: UISearchController!
     
@@ -24,10 +26,10 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
         appDelegate = UIApplication.sharedApplication().delegate as? AppDelegate
         appDelegate?.setRootViewController()
         
-        loadListOfServices()
-        
         tblSearchResults.delegate = self
         tblSearchResults.dataSource = self
+        
+        loadListOfServices()
         
         configureSearchController()
     }
@@ -38,9 +40,8 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
 
     @IBAction func leftSideButtonTapped(sender: AnyObject) {
-        var appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         
-        appDelegate.centerContainer!.toggleDrawerSide(MMDrawerSide.Left, animated: true, completion: nil)
+        appDelegate!.centerContainer!.toggleDrawerSide(MMDrawerSide.Left, animated: true, completion: nil)
     }
     
     func configureSearchController() {
@@ -80,28 +81,25 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
         let searchString = searchController.searchBar.text
         
         // Filter the data array and get only those countries that match the search text.
-        filteredArray = dataArray.filter({ (country) -> Bool in
-            let countryText: NSString = country
+        filteredArray = services.filter({ (service) -> Bool in
+            let serviceText: NSString = service.valueForKey("name") as! String
             
-            return (countryText.rangeOfString(searchString!, options: NSStringCompareOptions.CaseInsensitiveSearch).location) != NSNotFound
+            return (serviceText.rangeOfString(searchString!, options: NSStringCompareOptions.CaseInsensitiveSearch).location) != NSNotFound
         })
         // Reload the tableview.
         tblSearchResults.reloadData()
     }
     
     func loadListOfServices() {
-        // Specify the path to the countries list file.
-        let pathToFile = NSBundle.mainBundle().pathForResource("services", ofType: "txt")
-        
-        if let path = pathToFile {
-            // Load the file contents as a string.
-            let countriesString = try! String(contentsOfFile: path, encoding: NSUTF8StringEncoding)
-            
-            // Append the countries from the string to the dataArray array by breaking them using the line change character.
-            dataArray = countriesString.componentsSeparatedByString("\n")
-            
-            // Reload the tableview.
-            tblSearchResults.reloadData()
+        let query = PFQuery(className: "Service")
+        query.findObjectsInBackgroundWithBlock { (objects, error) -> Void in
+            if error == nil {
+                print("Successfully retrieved: \(objects)")
+                self.services = objects!
+                self.tblSearchResults.reloadData()
+            } else {
+                print("Error: \(error) \(error!.userInfo)")
+            }
         }
     }
     
@@ -117,7 +115,7 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
             return filteredArray.count
         }
         else {
-            return dataArray.count
+            return services.count
         }
     }
     
@@ -126,10 +124,10 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
         let cell = tableView.dequeueReusableCellWithIdentifier("idCell", forIndexPath: indexPath)
         
         if shouldShowSearchResults {
-            cell.textLabel?.text = filteredArray[indexPath.row]
+            cell.textLabel?.text = filteredArray[indexPath.row].valueForKey("name") as? String
         }
         else {
-            cell.textLabel?.text = dataArray[indexPath.row]
+            cell.textLabel?.text = services[indexPath.row].valueForKey("name") as? String
         }
         
         return cell
