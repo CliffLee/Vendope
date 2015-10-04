@@ -33,7 +33,7 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
         func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
             let location = locations.last
             let center = CLLocationCoordinate2D(latitude: location!.coordinate.latitude, longitude: location!.coordinate.longitude)
-            let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.07, longitudeDelta: 0.07))
+            let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.04, longitudeDelta: 0.04))
             self.mapView.setRegion(region, animated: true)
             self.locationManager.stopUpdatingLocation()
             
@@ -57,6 +57,7 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
         self.locationManager.startUpdatingLocation()
         self.mapView.showsUserLocation = true
         
+        singleton.mapView = self.mapView
         // Do any additional setup after loading the view, typically from a nib.
         appDelegate = UIApplication.sharedApplication().delegate as? AppDelegate
         appDelegate?.setRootViewController()
@@ -82,7 +83,7 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let location = locations.last
         let center = CLLocationCoordinate2D(latitude: location!.coordinate.latitude, longitude: location!.coordinate.longitude)
-        let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.07, longitudeDelta: 0.07))
+        let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.04, longitudeDelta: 0.04))
         self.mapView.setRegion(region, animated: true)
         self.locationManager.stopUpdatingLocation()
         
@@ -203,9 +204,23 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
             cell.textLabel?.text = singleton.results[indexPath.row].valueForKey("name") as? String
         }
         
+        placeAnnotation(singleton.results[indexPath.row])
+        
         return cell
     }
     
+    func placeAnnotation(service: PFObject) {
+        let x       = service.valueForKey("x") as! Double
+        let y       = service.valueForKey("y") as! Double
+        let title   = service.valueForKey("name") as! String
+        let coordinates:CLLocationCoordinate2D = CLLocationCoordinate2DMake(x, y)
+        let annotation = MKPointAnnotation()
+        annotation.coordinate = coordinates
+        annotation.title = title
+        mapView.addAnnotation(annotation)
+        
+
+    }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return 60.0
