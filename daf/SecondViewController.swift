@@ -38,6 +38,14 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
         configureSearchController()
         //configureSearchController()
         configureCustomSearchController()
+        
+        self.title = "VENDOPÉ"
+        /*for i in 1...20 {
+            var service = PFObject(className:"Service")
+            service.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
+                print("Object has been saved.")
+            }
+        }*/
     }
 
     override func didReceiveMemoryWarning() {

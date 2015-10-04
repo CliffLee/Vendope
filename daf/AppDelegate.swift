@@ -42,7 +42,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         centerContainer!.closeDrawerGestureModeMask = MMCloseDrawerGestureMode.PanningCenterView;
         
         window!.makeKeyAndVisible()
-        
+        UINavigationBar.appearance().barTintColor = UIColor(red: 0.4196, green: 0, blue: 0, alpha: 1)
+        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor(), NSFontAttributeName: UIFont(name: "Futura", size: 20)!]
+        UIApplication.sharedApplication().statusBarStyle = .LightContent
         return true
     }
     
@@ -71,7 +73,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
-
 }
 
