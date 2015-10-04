@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A278b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="xmD-rU-zNe">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="xmD-rU-zNe">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
@@ -31,11 +31,11 @@
                                         <rect key="frame" x="0.0" y="22" width="320" height="60"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="deH-ml-EEq" id="gQy-xT-YDy">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="59.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="59"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9jN-hW-bVZ">
-                                                    <rect key="frame" x="15" y="0.0" width="290" height="59.5"/>
+                                                    <rect key="frame" x="15" y="0.0" width="290" height="59"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -244,7 +244,6 @@
                             <constraint firstItem="rKX-Hf-svh" firstAttribute="top" secondItem="Saj-ih-gn7" secondAttribute="bottom" constant="8" symbolic="YES" id="P96-Gr-p93"/>
                             <constraint firstItem="Hk9-PA-H7z" firstAttribute="top" secondItem="rKX-Hf-svh" secondAttribute="bottom" constant="25" id="Q9O-bE-CaK"/>
                             <constraint firstItem="8Iv-o7-Ofc" firstAttribute="top" secondItem="Hk9-PA-H7z" secondAttribute="bottom" constant="19" id="QRH-sq-Fb7"/>
-                            <constraint firstItem="Saj-ih-gn7" firstAttribute="top" secondItem="kct-jD-wg3" secondAttribute="bottom" constant="74" id="Qyg-Ga-r5f"/>
                             <constraint firstItem="Hk9-PA-H7z" firstAttribute="centerX" secondItem="rKX-Hf-svh" secondAttribute="centerX" id="g43-Q0-lZy"/>
                             <constraint firstItem="Hk9-PA-H7z" firstAttribute="centerX" secondItem="8Iv-o7-Ofc" secondAttribute="centerX" id="gcH-55-a1c"/>
                             <constraint firstItem="Saj-ih-gn7" firstAttribute="trailing" secondItem="rKX-Hf-svh" secondAttribute="trailing" id="lyg-kP-YyM"/>
@@ -293,7 +292,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="vendopé" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FEd-sm-h0W">
-                                <rect key="frame" x="20" y="116" width="280" height="98"/>
+                                <rect key="frame" x="20" y="79" width="280" height="98"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="98" id="rk2-3K-ge4"/>
@@ -317,9 +316,8 @@
                             <constraint firstAttribute="trailingMargin" secondItem="gRX-fj-0DB" secondAttribute="trailing" constant="17" id="0sb-gO-sXs"/>
                             <constraint firstItem="FEd-sm-h0W" firstAttribute="centerX" secondItem="jAs-KH-A00" secondAttribute="centerX" id="1eM-HW-EQb"/>
                             <constraint firstItem="gRX-fj-0DB" firstAttribute="leading" secondItem="pv2-eU-rRk" secondAttribute="trailing" constant="38" id="6Zd-wW-eiK"/>
-                            <constraint firstItem="FEd-sm-h0W" firstAttribute="top" secondItem="phb-VW-uJd" secondAttribute="bottom" constant="96" id="CFB-fH-ov4"/>
                             <constraint firstItem="FEd-sm-h0W" firstAttribute="leading" secondItem="jAs-KH-A00" secondAttribute="leadingMargin" constant="4" id="EbR-Mz-kcq"/>
-                            <constraint firstItem="FEd-sm-h0W" firstAttribute="top" secondItem="phb-VW-uJd" secondAttribute="bottom" constant="96" id="J4d-mz-97j"/>
+                            <constraint firstItem="FEd-sm-h0W" firstAttribute="top" secondItem="phb-VW-uJd" secondAttribute="bottom" constant="59" id="J4d-mz-97j"/>
                             <constraint firstItem="7Wl-Vr-pR4" firstAttribute="top" secondItem="gRX-fj-0DB" secondAttribute="bottom" constant="42" id="Up2-La-sfP"/>
                             <constraint firstItem="pv2-eU-rRk" firstAttribute="firstBaseline" secondItem="gRX-fj-0DB" secondAttribute="baseline" id="faS-eU-GI4"/>
                             <constraint firstItem="pv2-eU-rRk" firstAttribute="top" secondItem="gRX-fj-0DB" secondAttribute="top" id="jna-bD-KpR"/>
