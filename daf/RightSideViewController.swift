@@ -1,5 +1,5 @@
 //
-//  LeftSideViewController.swift
+//  RightSideViewController.swift
 //  daf
 //
 //  Created by Clifford Lee on 10/3/15.
@@ -9,34 +9,24 @@
 import UIKit
 import Eureka
 
-class LeftSideViewController: FormViewController {
+class RightSideViewController: FormViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        form
-        +++ Section("") +++ Section("")
-        +++ Section("Explore")
-            <<< ButtonRow("explorevendor"){ $0.title = "Find a Job"}
-            <<< ButtonRow("explorecustomer"){ $0.title = "Get a Job Done"}
-        +++ Section("Your Account")
-            <<< ButtonRow("History"){ $0.title = "History"}
-            <<< ButtonRow("settings"){ $0.title = "Settings"}
-            <<< ButtonRow("listings"){ $0.title = "Add a Listing..."}
-            <<< ButtonRow("signout"){ $0.title = "Sign Out"}
-        +++ Section("Inbox")
         // Do any additional setup after loading the view.
+        form +++ Section("") +++ Section("")
+        +++ Section("Categories")
+        +++ Section("Distance")
+        +++ Section("Price")
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        
         // Dispose of any resources that can be recreated.
     }
     
-    
-    
-    
+
     /*
     // MARK: - Navigation
 
