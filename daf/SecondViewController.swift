@@ -6,9 +6,11 @@
 //  Copyright © 2015 Clifford Lee. All rights reserved.
 //
 
+
+
 import UIKit
 
-class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchResultsUpdating, UISearchBarDelegate {
+class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchResultsUpdating, UISearchBarDelegate, CustomSearchControllerDelegate {
     
     @IBOutlet weak var tblSearchResults: UITableView!
     
@@ -16,8 +18,10 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
     var filteredArray = [String]()
     var shouldShowSearchResults = false
     var searchController: UISearchController!
+    var customSearchController: CustomSearchController!
     
     var appDelegate:AppDelegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -29,7 +33,8 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
         tblSearchResults.delegate = self
         tblSearchResults.dataSource = self
         
-        configureSearchController()
+        //configureSearchController()
+        configureCustomSearchController()
     }
 
     override func didReceiveMemoryWarning() {
@@ -38,7 +43,7 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
 
     @IBAction func leftSideButtonTapped(sender: AnyObject) {
-        var appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         
         appDelegate.centerContainer!.toggleDrawerSide(MMDrawerSide.Left, animated: true, completion: nil)
     }
@@ -54,6 +59,17 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         
     }
+    
+    
+    func configureCustomSearchController() {
+        customSearchController = CustomSearchController(searchResultsController: self, searchBarFrame: CGRectMake(0.0, 0.0, tblSearchResults.frame.size.width, 50.0), searchBarFont: UIFont(name: "Open Sans", size: 16.0)!, searchBarTextColor: UIColor(red:0.42, green:0.00, blue:0.00, alpha:1.0), searchBarTintColor: UIColor.whiteColor())
+        
+        customSearchController.customSearchBar.placeholder = "SEARCH FOR SERVICES"
+        tblSearchResults.tableHeaderView = customSearchController.customSearchBar
+        
+        customSearchController.customDelegate = self
+    }
+    
     
     func searchBarTextDidBeginEditing(searchBar: UISearchBar) {
         shouldShowSearchResults = true
@@ -95,10 +111,10 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         if let path = pathToFile {
             // Load the file contents as a string.
-            let countriesString = try! String(contentsOfFile: path, encoding: NSUTF8StringEncoding)
+            let servicesString = try! String(contentsOfFile: path, encoding: NSUTF8StringEncoding)
             
             // Append the countries from the string to the dataArray array by breaking them using the line change character.
-            dataArray = countriesString.componentsSeparatedByString("\n")
+            dataArray = servicesString.componentsSeparatedByString("\n")
             
             // Reload the tableview.
             tblSearchResults.reloadData()
@@ -139,9 +155,37 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return 60.0
     }
-
+    
+    func didStartSearching() {
+        shouldShowSearchResults = true
+        tblSearchResults.reloadData()
+    }
     
     
+    func didTapOnSearchButton() {
+        if !shouldShowSearchResults {
+            shouldShowSearchResults = true
+            tblSearchResults.reloadData()
+        }
+    }
+    
+    
+    func didTapOnCancelButton() {
+        shouldShowSearchResults = false
+        tblSearchResults.reloadData()
+    }
+    
+    
+    func didChangeSearchText(searchText: String) {
+        // Filter the data array and get only those countries that match the search text.
+        filteredArray = dataArray.filter({ (country) -> Bool in
+            let countryText: NSString = country
+            
+            return (countryText.rangeOfString(searchText, options: NSStringCompareOptions.CaseInsensitiveSearch).location) != NSNotFound
+        })
         
+        // Reload the tableview.
+        tblSearchResults.reloadData()
+    }
 
 }
