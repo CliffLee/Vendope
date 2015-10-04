@@ -21,10 +21,11 @@ class LeftSideViewController: FormViewController {
             <<< ButtonRow("explorecustomer"){ $0.title = "Get a Job Done"}
         +++ Section("Your Account")
             <<< ButtonRow("History"){ $0.title = "History"}
+            <<< ButtonRow("Inbox") { $0.title = "Inbox"}
             <<< ButtonRow("settings"){ $0.title = "Settings"}
             <<< ButtonRow("listings"){ $0.title = "Add a Listing..."}
             <<< ButtonRow("signout"){ $0.title = "Sign Out"}
-        +++ Section("Inbox")
+        
         // Do any additional setup after loading the view.
     }
 
