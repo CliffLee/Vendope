@@ -7,21 +7,26 @@
 //
 
 import UIKit
+import Eureka
 
-class LeftSideViewController: UIViewController {
+class LeftSideViewController: FormViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        form +++ Section("") +++ Section("") +++ Section("Listings") +++ Section("Ratings") +++ Section("Inbox")
         // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+        
         // Dispose of any resources that can be recreated.
     }
     
-
+    
+    
+    
     /*
     // MARK: - Navigation
 
