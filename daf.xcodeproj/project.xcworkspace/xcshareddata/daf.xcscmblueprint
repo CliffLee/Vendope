@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "8EF775AA3FB433D1780748DFFBAE90E8D01B665E",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "8EF775AA3FB433D1780748DFFBAE90E8D01B665E" : 0,
+    "83BADBC5501CE21C43EFAD0B4239602133296C18" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "64817CC5-FEFA-4D06-8929-DCD075AC1976",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "8EF775AA3FB433D1780748DFFBAE90E8D01B665E" : "daf\/",
+    "83BADBC5501CE21C43EFAD0B4239602133296C18" : "daf\/Eureka\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "daf",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "daf.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/xmartlabs\/Eureka.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "83BADBC5501CE21C43EFAD0B4239602133296C18"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/CliffLee\/daf.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "8EF775AA3FB433D1780748DFFBAE90E8D01B665E"
+    }
+  ]
+}

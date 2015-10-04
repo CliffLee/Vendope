@@ -14,7 +14,14 @@ class LeftSideViewController: FormViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        form +++ Section("") +++ Section("") +++ Section("Listings") +++ Section("Ratings") +++ Section("Inbox")
+        form +++ Section("") +++ Section("") +++ Section("Your Account")
+            <<< ButtonRow("History"){ $0.title = "History"}
+            <<< ButtonRow("settings"){ $0.title = "Settings"}
+            <<< ButtonRow("listings"){ $0.title = "Add a Listing..."}
+        +++ Section("Explore")
+            <<< ButtonRow("explorevendor"){ $0.title = "Find a Job"}
+            <<< ButtonRow("explorecustomer"){ $0.title = "Get a Job Done"}
+        +++ Section("Inbox")
         // Do any additional setup after loading the view.
     }
 
