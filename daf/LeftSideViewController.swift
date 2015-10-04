@@ -13,8 +13,11 @@ class LeftSideViewController: FormViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        form +++ Section("Listings") +++ Section("Ratings") +++ Section("Contacts");
+        
+//        if ([self respondsToSelector:@selector(edgesForExtendedLayout)])
+//            self.edgesForExtendedLayout = UIRectEdgeNone;
+        
+        form +++ Section("") +++ Section("") +++ Section("Listings") +++ Section("Ratings") +++ Section("Contacts");
         // Do any additional setup after loading the view.
     }
 
