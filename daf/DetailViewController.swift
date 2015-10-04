@@ -30,7 +30,7 @@ class DetailViewController: UIViewController {
         self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
         
         
-        textViewDescription.text = service?.valueForKey("desc") as! String
+        textViewDescription.text = service?.valueForKey("desc") as! String + "\nPricing: " + ((service?.valueForKey("pricing"))! as! String) 
         let percentRating = service?.valueForKey("percentRating") as! Int
         textViewRating.text = "Rating: " + String(percentRating) + "%"
         ratingView.rating = (Double(percentRating)/100.0) * 5.0
