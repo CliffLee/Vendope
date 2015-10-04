@@ -9,6 +9,7 @@
 import Foundation
 import Parse
 import Bolts
+import MapKit
 
 private let _sharedInstance = Singleton()
 class Singleton {
@@ -22,4 +23,6 @@ class Singleton {
     var services:[PFObject] = []
     var results:[PFObject] = []
     var tblSearchResults:UITableView?
+    var mapView:MKMapView?
+    var indexDetail:Int?
 }
