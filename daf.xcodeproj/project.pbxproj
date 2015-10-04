@@ -41,6 +41,7 @@
 		B8B78C201BC128DF005C25E2 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8B78C1F1BC128DF005C25E2 /* MapKit.framework */; };
 		B8B78C231BC1387B005C25E2 /* Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B78C221BC1387B005C25E2 /* Singleton.swift */; settings = {ASSET_TAGS = (); }; };
 		B8B78C271BC169BD005C25E2 /* CosmosDistrib.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B78C261BC169BD005C25E2 /* CosmosDistrib.swift */; settings = {ASSET_TAGS = (); }; };
+		B8B78C291BC18455005C25E2 /* pics in Resources */ = {isa = PBXBuildFile; fileRef = B8B78C281BC18454005C25E2 /* pics */; settings = {ASSET_TAGS = (); }; };
 		C30D717A1BC05E2400BDBD5F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30D71791BC05E2400BDBD5F /* LoginViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		C3E34C8B1BC0763200C02929 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E34C8A1BC0763200C02929 /* StartViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		C3E34C8D1BC0796300C02929 /* NavigationControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E34C8C1BC0796300C02929 /* NavigationControllerDelegate.swift */; settings = {ASSET_TAGS = (); }; };
@@ -146,6 +147,7 @@
 		B8B78C1F1BC128DF005C25E2 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		B8B78C221BC1387B005C25E2 /* Singleton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Singleton.swift; sourceTree = "<group>"; };
 		B8B78C261BC169BD005C25E2 /* CosmosDistrib.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CosmosDistrib.swift; sourceTree = "<group>"; };
+		B8B78C281BC18454005C25E2 /* pics */ = {isa = PBXFileReference; lastKnownFileType = folder; path = pics; sourceTree = "<group>"; };
 		C30D71791BC05E2400BDBD5F /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		C3E34C8A1BC0763200C02929 /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		C3E34C8C1BC0796300C02929 /* NavigationControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationControllerDelegate.swift; sourceTree = "<group>"; };
@@ -255,6 +257,7 @@
 			children = (
 				A61584DF1BC0A11000054E51 /* DrawerFiles */,
 				C304A4901BC09A180000DB4E /* Frameworks */,
+				B8B78C281BC18454005C25E2 /* pics */,
 				A6FA74FA1BC059DA009DE867 /* AppDelegate.swift */,
 				B8B78C261BC169BD005C25E2 /* CosmosDistrib.swift */,
 				9A19BA6D1BC0E1AB00E84DA5 /* CustomSearchBar.swift */,
@@ -441,6 +444,7 @@
 				A6FA75071BC059E1009DE867 /* LaunchScreen.storyboard in Resources */,
 				A6FA75041BC059E1009DE867 /* Assets.xcassets in Resources */,
 				9AAD83651BC0AC8400D7C145 /* services.txt in Resources */,
+				B8B78C291BC18455005C25E2 /* pics in Resources */,
 				A6FA75021BC059E1009DE867 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

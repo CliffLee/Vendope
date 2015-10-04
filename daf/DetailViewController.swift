@@ -35,7 +35,10 @@ class DetailViewController: UIViewController {
         textViewRating.text = "Rating: " + String(percentRating) + "%"
         ratingView.rating = (Double(percentRating)/100.0) * 5.0
         ratingView.settings.fillMode = StarFillMode.Precise
-        
+        let filePath = "pics/" + String(index!) + ".jpg"
+        print("FILE PATH:")
+        print(filePath)
+        imageView.image = UIImage(named: filePath)
     }
 
     override func didReceiveMemoryWarning() {
