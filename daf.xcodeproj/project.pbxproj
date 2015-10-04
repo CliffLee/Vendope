@@ -13,6 +13,8 @@
 		A61584EB1BC0A11F00054E51 /* MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = A61584E41BC0A11F00054E51 /* MMDrawerController.m */; settings = {ASSET_TAGS = (); }; };
 		A61584EC1BC0A11F00054E51 /* MMDrawerVisualState.m in Sources */ = {isa = PBXBuildFile; fileRef = A61584E71BC0A11F00054E51 /* MMDrawerVisualState.m */; settings = {ASSET_TAGS = (); }; };
 		A61584ED1BC0A11F00054E51 /* UIViewController+MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = A61584E91BC0A11F00054E51 /* UIViewController+MMDrawerController.m */; settings = {ASSET_TAGS = (); }; };
+		A6DA75511BC0BF6000327A34 /* Eureka.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6DA754E1BC0BEE300327A34 /* Eureka.framework */; };
+		A6DA75521BC0BF6000327A34 /* Eureka.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A6DA754E1BC0BEE300327A34 /* Eureka.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A6FA74FB1BC059DA009DE867 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FA74FA1BC059DA009DE867 /* AppDelegate.swift */; };
 		A6FA74FD1BC059DA009DE867 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FA74FC1BC059DA009DE867 /* FirstViewController.swift */; };
 		A6FA74FF1BC059DA009DE867 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FA74FE1BC059DA009DE867 /* SecondViewController.swift */; };
@@ -28,6 +30,27 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		A6DA754D1BC0BEE300327A34 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A6DA75481BC0BEE300327A34 /* Eureka.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 51729DEB1B9A4F5E004A00EB;
+			remoteInfo = Eureka;
+		};
+		A6DA754F1BC0BEE300327A34 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A6DA75481BC0BEE300327A34 /* Eureka.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 51729DF51B9A4F5E004A00EB;
+			remoteInfo = EurekaTests;
+		};
+		A6DA75531BC0BF6000327A34 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A6DA75481BC0BEE300327A34 /* Eureka.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 51729DEA1B9A4F5E004A00EB;
+			remoteInfo = Eureka;
+		};
 		A6FA750E1BC059E1009DE867 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = A6FA74EF1BC059DA009DE867 /* Project object */;
@@ -44,6 +67,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		A6DA75551BC0BF6000327A34 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A6DA75521BC0BF6000327A34 /* Eureka.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		9AAD83641BC0AC8400D7C145 /* services.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = services.txt; sourceTree = "<group>"; };
 		A61584DD1BC0A0D700054E51 /* LeftSideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftSideViewController.swift; sourceTree = "<group>"; };
@@ -57,6 +94,7 @@
 		A61584E71BC0A11F00054E51 /* MMDrawerVisualState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMDrawerVisualState.m; sourceTree = "<group>"; };
 		A61584E81BC0A11F00054E51 /* UIViewController+MMDrawerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+MMDrawerController.h"; sourceTree = "<group>"; };
 		A61584E91BC0A11F00054E51 /* UIViewController+MMDrawerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+MMDrawerController.m"; sourceTree = "<group>"; };
+		A6DA75481BC0BEE300327A34 /* Eureka.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Eureka.xcodeproj; path = Eureka/Eureka.xcodeproj; sourceTree = "<group>"; };
 		A6FA74F71BC059DA009DE867 /* daf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = daf.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6FA74FA1BC059DA009DE867 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A6FA74FC1BC059DA009DE867 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -82,6 +120,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A6DA75511BC0BF6000327A34 /* Eureka.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,9 +158,19 @@
 			name = DrawerFiles;
 			sourceTree = "<group>";
 		};
+		A6DA75491BC0BEE300327A34 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A6DA754E1BC0BEE300327A34 /* Eureka.framework */,
+				A6DA75501BC0BEE300327A34 /* EurekaTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		A6FA74EE1BC059DA009DE867 = {
 			isa = PBXGroup;
 			children = (
+				A6DA75481BC0BEE300327A34 /* Eureka.xcodeproj */,
 				9AAD83641BC0AC8400D7C145 /* services.txt */,
 				A6FA74F91BC059DA009DE867 /* daf */,
 				A6FA75101BC059E5009DE867 /* dafTests */,
@@ -196,10 +245,12 @@
 				A6FA74F31BC059DA009DE867 /* Sources */,
 				A6FA74F41BC059DA009DE867 /* Frameworks */,
 				A6FA74F51BC059DA009DE867 /* Resources */,
+				A6DA75551BC0BF6000327A34 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				A6DA75541BC0BF6000327A34 /* PBXTargetDependency */,
 			);
 			name = daf;
 			productName = daf;
@@ -276,6 +327,12 @@
 			mainGroup = A6FA74EE1BC059DA009DE867;
 			productRefGroup = A6FA74F81BC059DA009DE867 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = A6DA75491BC0BEE300327A34 /* Products */;
+					ProjectRef = A6DA75481BC0BEE300327A34 /* Eureka.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				A6FA74F61BC059DA009DE867 /* daf */,
@@ -284,6 +341,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		A6DA754E1BC0BEE300327A34 /* Eureka.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Eureka.framework;
+			remoteRef = A6DA754D1BC0BEE300327A34 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A6DA75501BC0BEE300327A34 /* EurekaTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = EurekaTests.xctest;
+			remoteRef = A6DA754F1BC0BEE300327A34 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		A6FA74F51BC059DA009DE867 /* Resources */ = {
@@ -352,6 +426,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		A6DA75541BC0BF6000327A34 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Eureka;
+			targetProxy = A6DA75531BC0BF6000327A34 /* PBXContainerItemProxy */;
+		};
 		A6FA750F1BC059E1009DE867 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = A6FA74F61BC059DA009DE867 /* daf */;
@@ -472,6 +551,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = daf/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -488,6 +568,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = daf/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

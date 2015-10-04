@@ -6,13 +6,15 @@
 //  Copyright © 2015 Clifford Lee. All rights reserved.
 //
 
+import Eureka
 import UIKit
 
-class LeftSideViewController: UIViewController {
+class LeftSideViewController: FormViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        form +++ Section("Listings") +++ Section("Ratings") +++ Section("Contacts");
         // Do any additional setup after loading the view.
     }
 
