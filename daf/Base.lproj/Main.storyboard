@@ -57,13 +57,13 @@
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <navigationItem key="navigationItem" id="btO-h6-SXJ">
                         <barButtonItem key="leftBarButtonItem" title="☰" id="E2o-eC-Stj">
-                            <color key="tintColor" red="0.41960784313725491" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="leftSideButtonTapped:" destination="8rJ-Kc-sve" id="qCH-Y8-7gh"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Filter" id="vdC-fs-fhk">
-                            <color key="tintColor" red="0.41960784309999999" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="rightSideButtonTapped:" destination="8rJ-Kc-sve" id="mXb-Hm-pGQ"/>
                             </connections>
