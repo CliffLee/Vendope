@@ -23,7 +23,6 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     
     let locationManager = CLLocationManager()
-<<<<<<< HEAD
    
     @IBAction func locateUser(sender: AnyObject) {
         self.locationManager.delegate = self
@@ -40,9 +39,7 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
             
         }
     }
-=======
     let singleton = Singleton.sharedInstance
->>>>>>> b157c5b9b014ee6a38f4973e28ba969e10320f66
     
     var filteredArray: [PFObject] = []
     var shouldShowSearchResults = false
