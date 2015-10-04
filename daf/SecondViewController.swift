@@ -34,6 +34,7 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
         tblSearchResults.dataSource = self
         
         loadListOfServices()
+
         
         configureSearchController()
         //configureSearchController()
@@ -57,6 +58,11 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         appDelegate!.centerContainer!.toggleDrawerSide(MMDrawerSide.Left, animated: true, completion: nil)
     }
+    
+    @IBAction func rightSideButtonTapped(sender: AnyObject) {
+        appDelegate!.centerContainer!.toggleDrawerSide(MMDrawerSide.Right, animated: true, completion: nil)
+    }
+    
     
     func configureSearchController() {
         searchController = UISearchController(searchResultsController: nil)

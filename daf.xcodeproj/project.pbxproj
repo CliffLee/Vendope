@@ -17,6 +17,7 @@
 		A61584ED1BC0A11F00054E51 /* UIViewController+MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = A61584E91BC0A11F00054E51 /* UIViewController+MMDrawerController.m */; settings = {ASSET_TAGS = (); }; };
 		A6CBCC3A1BC0C9F30062AB21 /* Eureka.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6CBCC371BC0C9E40062AB21 /* Eureka.framework */; };
 		A6CBCC3B1BC0C9F30062AB21 /* Eureka.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A6CBCC371BC0C9E40062AB21 /* Eureka.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A6CBCC471BC0FCDF0062AB21 /* RightSideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6CBCC461BC0FCDF0062AB21 /* RightSideViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		A6FA74FB1BC059DA009DE867 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FA74FA1BC059DA009DE867 /* AppDelegate.swift */; };
 		A6FA74FD1BC059DA009DE867 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FA74FC1BC059DA009DE867 /* FirstViewController.swift */; };
 		A6FA74FF1BC059DA009DE867 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FA74FE1BC059DA009DE867 /* SecondViewController.swift */; };
@@ -112,6 +113,7 @@
 		A61584E81BC0A11F00054E51 /* UIViewController+MMDrawerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+MMDrawerController.h"; sourceTree = "<group>"; };
 		A61584E91BC0A11F00054E51 /* UIViewController+MMDrawerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+MMDrawerController.m"; sourceTree = "<group>"; };
 		A6CBCC311BC0C9E30062AB21 /* Eureka.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Eureka.xcodeproj; path = Eureka/Eureka.xcodeproj; sourceTree = "<group>"; };
+		A6CBCC461BC0FCDF0062AB21 /* RightSideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RightSideViewController.swift; sourceTree = "<group>"; };
 		A6FA74F71BC059DA009DE867 /* daf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = daf.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6FA74FA1BC059DA009DE867 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A6FA74FC1BC059DA009DE867 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -252,6 +254,7 @@
 				C3E34C8E1BC07AC900C02929 /* CircleTransitionAnimator.swift */,
 				C3E34C8A1BC0763200C02929 /* StartViewController.swift */,
 				A61584DD1BC0A0D700054E51 /* LeftSideViewController.swift */,
+				A6CBCC461BC0FCDF0062AB21 /* RightSideViewController.swift */,
 				C30D71791BC05E2400BDBD5F /* LoginViewController.swift */,
 				A6FA74FC1BC059DA009DE867 /* FirstViewController.swift */,
 				A6FA74FE1BC059DA009DE867 /* SecondViewController.swift */,
@@ -452,6 +455,7 @@
 				9A19BA6E1BC0E1AB00E84DA5 /* CustomSearchBar.swift in Sources */,
 				9A19BA711BC0E1E500E84DA5 /* CustomSearchController.swift in Sources */,
 				C30D717A1BC05E2400BDBD5F /* LoginViewController.swift in Sources */,
+				A6CBCC471BC0FCDF0062AB21 /* RightSideViewController.swift in Sources */,
 				A61584EC1BC0A11F00054E51 /* MMDrawerVisualState.m in Sources */,
 				A61584ED1BC0A11F00054E51 /* UIViewController+MMDrawerController.m in Sources */,
 				A6FA74FF1BC059DA009DE867 /* SecondViewController.swift in Sources */,
