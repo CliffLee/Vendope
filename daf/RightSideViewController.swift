@@ -17,12 +17,17 @@ class RightSideViewController: FormViewController {
         // Do any additional setup after loading the view.
         form +++ Section("") +++ Section("")
         +++ Section("Categories")
+            <<< SwitchRow(){ $0.title = "Automechanic" }
+            <<< SwitchRow(){ $0.title = "Beauty & Spas" }
+            <<< SwitchRow(){ $0.title = "Food" }
+            <<< SwitchRow(){ $0.title = "Home Services" }
+            <<< SwitchRow(){ $0.title = "Pet Care" }
+            <<< SwitchRow(){ $0.title = "Shopping" }
+            <<< SwitchRow(){ $0.title = "Tutoring" }
         +++ Section("Distance")
-            <<< SwitchRow("Dist1"){$0.title = "1 mi. radius"}
-            <<< SwitchRow("Dist2"){$0.title = "2 mi. radius"}
-            <<< SwitchRow("Dist5"){$0.title = "5 mi. radius"}
-            <<< SwitchRow("Dist10"){$0.title = "10 mi. radius"}
+            <<< SegmentedRow<String>() { $0.options = ["1 mi.", "2 mi.", "3 mi.", "4 mi."] }
         +++ Section("Price")
+            <<< SegmentedRow<String>() { $0.options = ["$", "$$", "$$$", "$$$$"] }
     }
 
     func hexStringToUIColor (hex:String) -> UIColor {
