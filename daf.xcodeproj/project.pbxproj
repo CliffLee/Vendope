@@ -38,6 +38,7 @@
 		B8B78C0C1BC0C2DA005C25E2 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8B78C0A1BC0C2DA005C25E2 /* Bolts.framework */; settings = {ASSET_TAGS = (); }; };
 		B8B78C0D1BC0C2DA005C25E2 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8B78C0B1BC0C2DA005C25E2 /* Parse.framework */; settings = {ASSET_TAGS = (); }; };
 		C30D717A1BC05E2400BDBD5F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30D71791BC05E2400BDBD5F /* LoginViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		C33CC0741BC115D000865519 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C33CC0731BC115D000865519 /* MapKit.framework */; };
 		C3E34C8B1BC0763200C02929 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E34C8A1BC0763200C02929 /* StartViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		C3E34C8D1BC0796300C02929 /* NavigationControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E34C8C1BC0796300C02929 /* NavigationControllerDelegate.swift */; settings = {ASSET_TAGS = (); }; };
 		C3E34C8F1BC07AC900C02929 /* CircleTransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E34C8E1BC07AC900C02929 /* CircleTransitionAnimator.swift */; settings = {ASSET_TAGS = (); }; };
@@ -139,6 +140,7 @@
 		B8B78C0A1BC0C2DA005C25E2 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		B8B78C0B1BC0C2DA005C25E2 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		C30D71791BC05E2400BDBD5F /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		C33CC0731BC115D000865519 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		C3E34C8A1BC0763200C02929 /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		C3E34C8C1BC0796300C02929 /* NavigationControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationControllerDelegate.swift; sourceTree = "<group>"; };
 		C3E34C8E1BC07AC900C02929 /* CircleTransitionAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleTransitionAnimator.swift; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 				B8B78C011BC0C00F005C25E2 /* CFNetwork.framework in Frameworks */,
 				B8B78C021BC0C00F005C25E2 /* CoreGraphics.framework in Frameworks */,
 				B8B78C031BC0C00F005C25E2 /* CoreLocation.framework in Frameworks */,
+				C33CC0741BC115D000865519 /* MapKit.framework in Frameworks */,
 				B8B78C041BC0C00F005C25E2 /* libsqlite3.tbd in Frameworks */,
 				B8B78C051BC0C00F005C25E2 /* libz.tbd in Frameworks */,
 				B8B78C061BC0C00F005C25E2 /* QuartzCore.framework in Frameworks */,
@@ -211,6 +214,7 @@
 		A6FA74EE1BC059DA009DE867 = {
 			isa = PBXGroup;
 			children = (
+				C33CC0731BC115D000865519 /* MapKit.framework */,
 				A6CBCC311BC0C9E30062AB21 /* Eureka.xcodeproj */,
 				B8B78BF61BC0C00F005C25E2 /* AudioToolbox.framework */,
 				B8B78BF71BC0C00F005C25E2 /* CFNetwork.framework */,
@@ -361,6 +365,12 @@
 				TargetAttributes = {
 					A6FA74F61BC059DA009DE867 = {
 						CreatedOnToolsVersion = 7.0.1;
+						DevelopmentTeam = BWX5BKUT9S;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					A6FA750C1BC059E1009DE867 = {
 						CreatedOnToolsVersion = 7.0.1;
@@ -609,6 +619,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -619,6 +631,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = leecliff.daf;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "daf/daf-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -630,6 +643,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -640,6 +655,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = leecliff.daf;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "daf/daf-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = 1;
