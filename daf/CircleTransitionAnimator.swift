@@ -11,7 +11,7 @@ import UIKit
 class CircleTransitionAnimator: NSObject, UIViewControllerAnimatedTransitioning {
     
     func transitionDuration(transitionContext: UIViewControllerContextTransitioning?) -> NSTimeInterval {
-        return 0.5
+        return 0.2
     }
     
     weak var transitionContext: UIViewControllerContextTransitioning?
@@ -33,7 +33,7 @@ class CircleTransitionAnimator: NSObject, UIViewControllerAnimatedTransitioning 
         //4
         var circleMaskPathInitial = UIBezierPath(ovalInRect: button.frame)
         var extremePoint = CGPoint(x: button.center.x - 0, y: button.center.y - CGRectGetHeight(toViewController.view.bounds))
-        var radius = 0.08*((extremePoint.x*extremePoint.x) + (extremePoint.y*extremePoint.y))
+        var radius = 0.01*((extremePoint.x*extremePoint.x) + (extremePoint.y*extremePoint.y))
         var circleMaskPathFinal = UIBezierPath(ovalInRect: CGRectInset(button.frame, -radius, -radius))
         
         //5

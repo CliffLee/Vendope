@@ -71,7 +71,7 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
         //configureSearchController()
         configureCustomSearchController()
         
-        self.title = "VENDOPÉ"
+        self.title = "vendopé"
         /*for i in 1...20 {
             var service = PFObject(className:"Service")
             service.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
