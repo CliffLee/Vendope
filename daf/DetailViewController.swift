@@ -17,6 +17,8 @@ class DetailViewController: UIViewController {
     
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var textViewDescription: UITextView!
+    @IBOutlet weak var textViewRating: UITextView!
+    @IBOutlet weak var ratingView: CosmosView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,9 +26,15 @@ class DetailViewController: UIViewController {
         service = singleton.services[index!]
         
         self.title = service?.valueForKey("name") as! String
-        print(service?.valueForKey("desc")! as! String)
+        self.navigationController!.navigationBar.topItem!.title = "";
+        self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
+        
         
         textViewDescription.text = service?.valueForKey("desc") as! String
+        let percentRating = service?.valueForKey("percentRating") as! Int
+        textViewRating.text = "Rating: " + String(percentRating) + "%"
+        ratingView.rating = (Double(percentRating)/100.0) * 5.0
+        ratingView.settings.fillMode = StarFillMode.Precise
         
     }
 
