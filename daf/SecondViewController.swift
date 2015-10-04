@@ -119,7 +119,7 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
     func configureCustomSearchController() {
         customSearchController = CustomSearchController(searchResultsController: self, searchBarFrame: CGRectMake(0.0, 0.0, tblSearchResults.frame.size.width, 50.0), searchBarFont: UIFont(name: "Helvetica Neue", size: 16.0)!, searchBarTextColor: UIColor(red:0.42, green:0.00, blue:0.00, alpha:1.0), searchBarTintColor: UIColor.whiteColor())
         
-        customSearchController.customSearchBar.placeholder = "SEARCH FOR SERVICES"
+        customSearchController.customSearchBar.placeholder = "Seach for services"
         tblSearchResults.tableHeaderView = customSearchController.customSearchBar
         
         customSearchController.customDelegate = self
