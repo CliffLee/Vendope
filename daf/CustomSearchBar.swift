@@ -2,6 +2,9 @@
 //  CustomSearchBar.swift
 //  CustomSearchBar
 //
+//  Created by Anup Krishnamraju on 10/3/15.
+//  Copyright © 2015 Clifford Lee. All rights reserved.
+//
 
 import UIKit
 

@@ -1,9 +1,8 @@
 //
 //  CustomSearchController.swift
 //  CustomSearchBar
-//
-//  Created by Gabriel Theodoropoulos on 8/9/15.
-//  Copyright (c) 2015 Appcoda. All rights reserved.
+//  Created by Anup Krishnamraju on 10/3/15.
+//  Copyright © 2015 Clifford Lee. All rights reserved.
 //
 
 import UIKit
