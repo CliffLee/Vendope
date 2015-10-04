@@ -39,6 +39,7 @@
 		B8B78C0C1BC0C2DA005C25E2 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8B78C0A1BC0C2DA005C25E2 /* Bolts.framework */; settings = {ASSET_TAGS = (); }; };
 		B8B78C0D1BC0C2DA005C25E2 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8B78C0B1BC0C2DA005C25E2 /* Parse.framework */; settings = {ASSET_TAGS = (); }; };
 		B8B78C201BC128DF005C25E2 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8B78C1F1BC128DF005C25E2 /* MapKit.framework */; };
+		B8B78C231BC1387B005C25E2 /* Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B78C221BC1387B005C25E2 /* Singleton.swift */; settings = {ASSET_TAGS = (); }; };
 		C30D717A1BC05E2400BDBD5F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30D71791BC05E2400BDBD5F /* LoginViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		C3E34C8B1BC0763200C02929 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E34C8A1BC0763200C02929 /* StartViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		C3E34C8D1BC0796300C02929 /* NavigationControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E34C8C1BC0796300C02929 /* NavigationControllerDelegate.swift */; settings = {ASSET_TAGS = (); }; };
@@ -142,6 +143,7 @@
 		B8B78C0A1BC0C2DA005C25E2 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		B8B78C0B1BC0C2DA005C25E2 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		B8B78C1F1BC128DF005C25E2 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		B8B78C221BC1387B005C25E2 /* Singleton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Singleton.swift; sourceTree = "<group>"; };
 		C30D71791BC05E2400BDBD5F /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		C3E34C8A1BC0763200C02929 /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		C3E34C8C1BC0796300C02929 /* NavigationControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationControllerDelegate.swift; sourceTree = "<group>"; };
@@ -259,6 +261,7 @@
 				C3E34C8A1BC0763200C02929 /* StartViewController.swift */,
 				A61584DD1BC0A0D700054E51 /* LeftSideViewController.swift */,
 				A6CBCC461BC0FCDF0062AB21 /* RightSideViewController.swift */,
+				B8B78C221BC1387B005C25E2 /* Singleton.swift */,
 				C30D71791BC05E2400BDBD5F /* LoginViewController.swift */,
 				A6FA74FC1BC059DA009DE867 /* FirstViewController.swift */,
 				A6FA74FE1BC059DA009DE867 /* SecondViewController.swift */,
@@ -473,6 +476,7 @@
 				C3E34C8F1BC07AC900C02929 /* CircleTransitionAnimator.swift in Sources */,
 				A61584EB1BC0A11F00054E51 /* MMDrawerController.m in Sources */,
 				C3E34C8D1BC0796300C02929 /* NavigationControllerDelegate.swift in Sources */,
+				B8B78C231BC1387B005C25E2 /* Singleton.swift in Sources */,
 				A61584DE1BC0A0D700054E51 /* LeftSideViewController.swift in Sources */,
 				A6FA74FD1BC059DA009DE867 /* FirstViewController.swift in Sources */,
 			);

@@ -19,8 +19,8 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
     @IBOutlet weak var tblSearchResults: UITableView!
     
     let locationManager = CLLocationManager()
+    let singleton = Singleton.sharedInstance
     
-    var services:[PFObject] = []
     var filteredArray: [PFObject] = []
     var shouldShowSearchResults = false
     var searchController: UISearchController!
@@ -43,9 +43,8 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         tblSearchResults.delegate = self
         tblSearchResults.dataSource = self
-        
         loadListOfServices()
-
+        singleton.tblSearchResults = tblSearchResults
         
         configureSearchController()
         //configureSearchController()
@@ -132,7 +131,7 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
         let searchString = searchController.searchBar.text
         
         // Filter the data array and get only those countries that match the search text.
-        filteredArray = services.filter({ (service) -> Bool in
+        filteredArray = singleton.results.filter({ (service) -> Bool in
             let serviceText: NSString = service.valueForKey("name") as! String
             
             return (serviceText.rangeOfString(searchString!, options: NSStringCompareOptions.CaseInsensitiveSearch).location) != NSNotFound
@@ -146,7 +145,10 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
         query.findObjectsInBackgroundWithBlock { (objects, error) -> Void in
             if error == nil {
                 print("Successfully retrieved: \(objects)")
-                self.services = objects!
+                for object in objects! {
+                    self.singleton.services.append(object)
+                    self.singleton.results.append(object)
+                }
                 self.tblSearchResults.reloadData()
             } else {
                 print("Error: \(error) \(error!.userInfo)")
@@ -166,7 +168,7 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
             return filteredArray.count
         }
         else {
-            return services.count
+            return singleton.results.count
         }
     }
     
@@ -178,7 +180,7 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
             cell.textLabel?.text = filteredArray[indexPath.row].valueForKey("name") as? String
         }
         else {
-            cell.textLabel?.text = services[indexPath.row].valueForKey("name") as? String
+            cell.textLabel?.text = singleton.results[indexPath.row].valueForKey("name") as? String
         }
         
         return cell
@@ -211,7 +213,7 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     func didChangeSearchText(searchText: String) {
         // Filter the data array and get only those countries that match the search text.
-        filteredArray = services.filter({ (service) -> Bool in
+        filteredArray = singleton.results.filter({ (service) -> Bool in
             let serviceText: NSString = service.valueForKey("name") as! String
             
             return (serviceText.rangeOfString(searchText, options: NSStringCompareOptions.CaseInsensitiveSearch).location) != NSNotFound
@@ -220,5 +222,6 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
         // Reload the tableview.
         tblSearchResults.reloadData()
     }
+    
 
 }

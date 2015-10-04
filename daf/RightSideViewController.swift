@@ -10,20 +10,21 @@ import UIKit
 import Eureka
 
 class RightSideViewController: FormViewController {
-
+    
+    let singleton = Singleton.sharedInstance
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         form +++ Section("") +++ Section("")
         +++ Section("Categories")
-            <<< SwitchRow(){ $0.title = "Automechanic" }
-            <<< SwitchRow(){ $0.title = "Beauty & Spas" }
-            <<< SwitchRow(){ $0.title = "Food" }
-            <<< SwitchRow(){ $0.title = "Home Services" }
-            <<< SwitchRow(){ $0.title = "Pet Care" }
-            <<< SwitchRow(){ $0.title = "Shopping" }
-            <<< SwitchRow(){ $0.title = "Tutoring" }
+            <<< SwitchRow("Automechanic"){ $0.title = "Automechanic"; $0.value = true}.onChange{row in self.filterResults(row.tag!)}
+            <<< SwitchRow("Beauty & Spas"){ $0.title = "Beauty & Spas"; $0.value = true}.onChange{row in self.filterResults(row.tag!)}
+            <<< SwitchRow("Food"){ $0.title = "Food"; $0.value = true}.onChange{row in self.filterResults(row.tag!)}
+            <<< SwitchRow("Home Services"){ $0.title = "Home Services"; $0.value = true}.onChange{row in self.filterResults(row.tag!)}
+            <<< SwitchRow("Pet Care"){ $0.title = "Pet Care"; $0.value = true}.onChange{row in self.filterResults(row.tag!)}
+            <<< SwitchRow("Shopping"){ $0.title = "Shopping"; $0.value = true}.onChange{row in self.filterResults(row.tag!)}
+            <<< SwitchRow("Tutoring"){ $0.title = "Tutoring"; $0.value = true}.onChange{row in self.filterResults(row.tag!)}
         +++ Section("Distance")
             <<< SegmentedRow<String>() { $0.options = ["1 mi.", "2 mi.", "3 mi.", "4 mi."] }
         +++ Section("Price")
@@ -57,7 +58,21 @@ class RightSideViewController: FormViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    func filterResults(tag:String) {
+        singleton.results.removeAll()
+        for service in singleton.services {
+            for i in 0...6 {
+                if (form.rows[i].baseValue as! Bool) {
+                    if (service.valueForKey("category") as? String == form.rows[i].tag && singleton.results.indexOf(service) == nil) {
+                        singleton.results.append(service)
+                    }
+                }
+            }
+        }
+        singleton.tblSearchResults?.reloadData()
+    }
+    
+    
     /*
     // MARK: - Navigation
 
@@ -67,5 +82,5 @@ class RightSideViewController: FormViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    
 }
