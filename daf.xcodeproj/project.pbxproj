@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9AAD83651BC0AC8400D7C145 /* services.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9AAD83641BC0AC8400D7C145 /* services.txt */; settings = {ASSET_TAGS = (); }; };
 		A61584DE1BC0A0D700054E51 /* LeftSideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61584DD1BC0A0D700054E51 /* LeftSideViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		A61584EA1BC0A11F00054E51 /* MMDrawerBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A61584E21BC0A11F00054E51 /* MMDrawerBarButtonItem.m */; settings = {ASSET_TAGS = (); }; };
 		A61584EB1BC0A11F00054E51 /* MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = A61584E41BC0A11F00054E51 /* MMDrawerController.m */; settings = {ASSET_TAGS = (); }; };
@@ -44,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9AAD83641BC0AC8400D7C145 /* services.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = services.txt; sourceTree = "<group>"; };
 		A61584DD1BC0A0D700054E51 /* LeftSideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftSideViewController.swift; sourceTree = "<group>"; };
 		A61584E01BC0A11E00054E51 /* daf-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "daf-Bridging-Header.h"; sourceTree = "<group>"; };
 		A61584E11BC0A11F00054E51 /* MMDrawerBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDrawerBarButtonItem.h; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 		A6FA74EE1BC059DA009DE867 = {
 			isa = PBXGroup;
 			children = (
+				9AAD83641BC0AC8400D7C145 /* services.txt */,
 				A6FA74F91BC059DA009DE867 /* daf */,
 				A6FA75101BC059E5009DE867 /* dafTests */,
 				A6FA751B1BC059F0009DE867 /* dafUITests */,
@@ -289,6 +292,7 @@
 			files = (
 				A6FA75071BC059E1009DE867 /* LaunchScreen.storyboard in Resources */,
 				A6FA75041BC059E1009DE867 /* Assets.xcassets in Resources */,
+				9AAD83651BC0AC8400D7C145 /* services.txt in Resources */,
 				A6FA75021BC059E1009DE867 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
