@@ -126,10 +126,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ABG-MX-Qzi" customClass="CosmosView" customModule="daf" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ABG-MX-Qzi" customClass="CosmosView" customModule="daf" customModuleProvider="target">
                                 <rect key="frame" x="100" y="231" width="120" height="22"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.41960784309999999" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="iqY-0B-anp"/>
+                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="colorFilled">
                                         <color key="value" red="1" green="0.80000000000000004" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -142,22 +145,33 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="q50-Eq-YKA">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="q50-Eq-YKA">
                                 <rect key="frame" x="40" y="95" width="240" height="128"/>
                                 <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="iND-RK-L0v"/>
+                                    <constraint firstAttribute="width" constant="240" id="u0M-vc-SpZ"/>
+                                </constraints>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Pt-zj-6e4">
-                                <rect key="frame" x="40" y="261" width="240" height="128"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="GFE-7M-mXS">
+                                <rect key="frame" x="40" y="245" width="240" height="25"/>
                                 <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="7NY-oD-nEJ"/>
+                                    <constraint firstAttribute="height" constant="25" id="XCK-iV-3bU"/>
+                                </constraints>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="GFE-7M-mXS">
-                                <rect key="frame" x="40" y="245" width="240" height="25"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Pt-zj-6e4">
+                                <rect key="frame" x="40" y="278" width="240" height="68"/>
                                 <animations/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="v24-At-6kb"/>
+                                </constraints>
+                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -165,6 +179,17 @@
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.41960784309999999" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="2Pt-zj-6e4" firstAttribute="top" secondItem="GFE-7M-mXS" secondAttribute="bottom" constant="8" id="2Kc-Lo-gwJ"/>
+                            <constraint firstItem="GFE-7M-mXS" firstAttribute="top" secondItem="ABG-MX-Qzi" secondAttribute="bottom" constant="-8" id="AKV-DO-lVm"/>
+                            <constraint firstItem="ABG-MX-Qzi" firstAttribute="centerX" secondItem="P1n-2B-BIg" secondAttribute="centerX" id="HDd-me-Xph"/>
+                            <constraint firstItem="q50-Eq-YKA" firstAttribute="top" secondItem="PBb-vh-Sss" secondAttribute="bottom" constant="31" id="Kh5-Uh-ghr"/>
+                            <constraint firstItem="GFE-7M-mXS" firstAttribute="leading" secondItem="P1n-2B-BIg" secondAttribute="leading" constant="40" id="LrR-Iq-KA9"/>
+                            <constraint firstItem="ABG-MX-Qzi" firstAttribute="top" secondItem="q50-Eq-YKA" secondAttribute="bottom" constant="8" id="cOW-LV-jiL"/>
+                            <constraint firstItem="2Pt-zj-6e4" firstAttribute="centerX" secondItem="P1n-2B-BIg" secondAttribute="centerX" id="ldl-l7-lAB"/>
+                            <constraint firstAttribute="trailing" secondItem="GFE-7M-mXS" secondAttribute="trailing" constant="40" id="vtu-51-Rkk"/>
+                            <constraint firstItem="q50-Eq-YKA" firstAttribute="centerX" secondItem="P1n-2B-BIg" secondAttribute="centerX" id="yrH-rG-wtX"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="q6x-9K-n0w"/>
                     <connections>

@@ -14,10 +14,11 @@ class RightSideViewController: FormViewController {
     let singleton = Singleton.sharedInstance
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        self.navigationController?.navigationBarHidden = true;
+        
         // Do any additional setup after loading the view.
-        form +++ Section("") +++ Section("")
-        +++ Section("Categories")
+        form +++ Section("Categories")
             <<< SwitchRow("Automechanic"){ $0.title = "Automechanic"; $0.value = true}.onChange{row in self.filterResults(row.tag!)}
             <<< SwitchRow("Beauty & Spas"){ $0.title = "Beauty & Spas"; $0.value = true}.onChange{row in self.filterResults(row.tag!)}
             <<< SwitchRow("Food"){ $0.title = "Food"; $0.value = true}.onChange{row in self.filterResults(row.tag!)}
